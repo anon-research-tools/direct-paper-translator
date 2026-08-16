@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+jobs/
+任务目录/
+*.pdf
+
