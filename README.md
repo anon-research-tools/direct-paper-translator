@@ -1,8 +1,21 @@
 # Direct Paper Translator
 
-一个面向 OpenCode 的极简学术论文 PDF 翻译 skill：把已有文字层的 PDF 提取成干净文本，生成一份简体中文 Markdown 工作译稿，再套用固定模板生成单文件 HTML。
+<div align="center">
 
-它适合希望快速得到“能阅读、能保存、能打开”的论文中文初稿的场景。它不是学术定稿工具，也不会替代人工核对。
+**把有文字层的学术 PDF，快速变成中文 Markdown 与单文件 HTML**
+
+适用于能够读取 skill、运行本地命令并写入文件的智能体
+
+</div>
+
+> [!TIP]
+> **三步开始**
+>
+> 1. 将本仓库放入你的智能体 skill 目录，并让智能体使用 `direct-paper-translator`。
+> 2. 提供一个有文字层的论文 PDF；智能体会运行 `prepare`，读取并翻译 `source.md`。
+> 3. 智能体写入 `translation.md` 后运行 `finalize`，即可得到中文 Markdown 和 HTML。
+
+这个项目面向通用智能体，而不是某一个特定平台。例如可以配合 **Claude Code、WorkBuddy、Codex**，以及其他支持本地 skill 或类似工作流的智能体使用。它适合快速得到“能阅读、能保存、能打开”的论文中文工作稿；不把机器译文当作学术定稿，也不会替代人工核对。
 
 ## 它怎么工作
 
@@ -26,7 +39,7 @@ python3 -m pip install PyMuPDF
 
 ## 命令
 
-在本 skill 目录中运行：
+在本 skill 目录中运行。通常由智能体代为执行；也可以手动运行：
 
 ```bash
 python3 scripts/flow.py prepare "论文.pdf" --jobs-root "任务目录"
@@ -60,4 +73,4 @@ python3 -m unittest discover -s tests -v
 
 ## 许可
 
-如需公开复用，建议在发布仓库时补充一个明确的开源许可证。没有许可证时，GitHub 上的公开代码默认仍不等于授予他人自由复制、修改和再发布的权利。
+本项目使用 [MIT License](LICENSE)，允许个人和组织自由使用、修改和再发布，但请保留许可证与版权声明。
