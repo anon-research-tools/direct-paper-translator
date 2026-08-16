@@ -1,0 +1,4 @@
+interface:
+  display_name: "直接论文翻译"
+  short_description: "快速预处理 PDF，直接翻译并生成 Markdown 与 HTML"
+  default_prompt: "使用 $direct-paper-translator 直接把这篇 PDF 翻译成带译者导读的中文 Markdown 和 HTML。"
